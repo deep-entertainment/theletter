@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/iceskating_ambience.ogg-3282c29c7c68e2023def0591fd122ec4.oggstr"
+
+[deps]
+
+source_file="res://sounds/iceskating_ambience.ogg"
+dest_files=[ "res://.import/iceskating_ambience.ogg-3282c29c7c68e2023def0591fd122ec4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

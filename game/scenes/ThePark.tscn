@@ -1,0 +1,939 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://scripts/ThePark.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Cinematograph.tscn" type="PackedScene" id=2]
+[ext_resource path="res://images/The Park.png" type="Texture" id=3]
+[ext_resource path="res://images/leaf.png" type="Texture" id=4]
+[ext_resource path="res://images/stick.png" type="Texture" id=5]
+[ext_resource path="res://images/ben.png" type="Texture" id=6]
+[ext_resource path="res://images/ben_smartphone.png" type="Texture" id=7]
+[ext_resource path="res://images/bench_front.png" type="Texture" id=8]
+[ext_resource path="res://sounds/park_ambience.ogg" type="AudioStream" id=9]
+[ext_resource path="res://sounds/sitdown.ogg" type="AudioStream" id=10]
+[ext_resource path="res://sounds/snow_footsteps.ogg" type="AudioStream" id=11]
+[ext_resource path="res://music/iceskating.ogg" type="AudioStream" id=12]
+[ext_resource path="res://sounds/iceskating_ambience.ogg" type="AudioStream" id=13]
+[ext_resource path="res://images/girl2/lyingdown/0001.png" type="Texture" id=14]
+[ext_resource path="res://images/girl2/idle.png" type="Texture" id=15]
+[ext_resource path="res://images/girl2/lyingdown/0005.png" type="Texture" id=16]
+[ext_resource path="res://images/girl2/lyingdown/0008.png" type="Texture" id=17]
+[ext_resource path="res://images/girl2/lyingdown/0009.png" type="Texture" id=18]
+[ext_resource path="res://images/girl2/lyingdown/0000.png" type="Texture" id=19]
+[ext_resource path="res://images/girl2/lyingdown/0003.png" type="Texture" id=20]
+[ext_resource path="res://images/girl2/lyingdown/0007.png" type="Texture" id=21]
+[ext_resource path="res://images/girl1/stunt.png" type="Texture" id=22]
+[ext_resource path="res://images/girl2/skiing.png" type="Texture" id=23]
+[ext_resource path="res://images/girl2/lyingdown/0010.png" type="Texture" id=24]
+[ext_resource path="res://images/girl2/fear.png" type="Texture" id=25]
+[ext_resource path="res://images/girl1/lyingdown/0001.png" type="Texture" id=26]
+[ext_resource path="res://images/girl2/lyingdown/0004.png" type="Texture" id=27]
+[ext_resource path="res://sounds/icecrack1.ogg" type="AudioStream" id=28]
+[ext_resource path="res://images/girl1/fear.png" type="Texture" id=29]
+[ext_resource path="res://images/girl1/idle.png" type="Texture" id=30]
+[ext_resource path="res://images/girl1/lyingdown/0005.png" type="Texture" id=31]
+[ext_resource path="res://images/girl2/lyingdown/0002.png" type="Texture" id=32]
+[ext_resource path="res://images/girl1/lyingdown/0003.png" type="Texture" id=33]
+[ext_resource path="res://images/girl2/lyingdown/0006.png" type="Texture" id=34]
+[ext_resource path="res://images/girl1/lyingdown/0006.png" type="Texture" id=35]
+[ext_resource path="res://images/girl1/lyingdown/0000.png" type="Texture" id=36]
+[ext_resource path="res://images/girl1/lyingdown/0009.png" type="Texture" id=37]
+[ext_resource path="res://images/girl1/lyingdown/0002.png" type="Texture" id=38]
+[ext_resource path="res://images/girl2/stunt.png" type="Texture" id=39]
+[ext_resource path="res://images/girl1/lyingdown/0010.png" type="Texture" id=40]
+[ext_resource path="res://images/girl1/lyingdown/0007.png" type="Texture" id=41]
+[ext_resource path="res://images/girl1/lyingdown/0004.png" type="Texture" id=42]
+[ext_resource path="res://images/girl1/lyingdown/0008.png" type="Texture" id=43]
+[ext_resource path="res://images/girl1/skliing.png" type="Texture" id=44]
+[ext_resource path="res://scenes/BenCoat.tscn" type="PackedScene" id=45]
+[ext_resource path="res://sounds/icecrack2.ogg" type="AudioStream" id=46]
+[ext_resource path="res://sounds/notification.ogg" type="AudioStream" id=47]
+[ext_resource path="res://sounds/typing.ogg" type="AudioStream" id=48]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Leaf"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Leaf:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.9, 2.7, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 6.06286 ),
+"update": 0,
+"values": [ 0.0, 20.0, 0.0, 5.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Leaf:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.9, 2.7, 4.8, 5, 5.2, 9, 9.2, 9.4, 9.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LeafFlipped:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.9, 2.7, 4.8, 5, 5.2, 9, 9.2, 9.4, 9.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LeafFlipped:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.9, 2.7, 6.3, 7.2, 8, 8.4, 8.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -10.0, -10.0, -20.0, -20.0, -30.0, -20.0 ]
+}
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "fear",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "skiing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 33 ), ExtResource( 42 ), ExtResource( 31 ), ExtResource( 35 ), ExtResource( 41 ), ExtResource( 43 ), ExtResource( 37 ), ExtResource( 40 ) ],
+"loop": false,
+"name": "lyingdown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "stunt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=8]
+resource_name = "Getting in fear"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Girl:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "skiing", "idle", "fear" ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("../Sound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 28 )
+} ],
+"times": PoolRealArray( 0.1 )
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../Cinematograph")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "2_icea" ],
+"method": "play_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Skiing"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 3.1, 4.1, 5.1, 6, 6.1, 7.2, 7.6, 8.1, 9.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 0.840896, 1.86607, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 227.95, 6.10352e-05 ), Vector2( -70.6645, 66.1055 ), Vector2( -70.6645, 66.1055 ), Vector2( 143.609, -18.236 ), Vector2( 143.609, -18.236 ), Vector2( 531.124, 77.5031 ), Vector2( 473.452, 80.6944 ), Vector2( -45.59, 109.416 ), Vector2( -45.59, 109.416 ), Vector2( -45.59, 109.416 ), Vector2( 227.95, 6.10352e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Girl:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1.1, 3.2, 4.1, 5.2, 5.3, 5.9, 6, 6.2, 6.3, 6.7, 6.9, 8.2, 9.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "skiing", "idle", "skiing", "idle", "skiing", "stunt", "skiing", "idle", "skiing", "stunt", "skiing", "idle", "skiing", "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Girl:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.7, 6.1, 7.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true ]
+}
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "fear",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "skiing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 14 ), ExtResource( 32 ), ExtResource( 20 ), ExtResource( 27 ), ExtResource( 16 ), ExtResource( 34 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "lyingdown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "stunt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=9]
+resource_name = "Getting in fear"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Girl:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "skiing", "idle", "fear" ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Skiing"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 4.6, 6, 7.3, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -91.8856, 75.6705 ), Vector2( 443.213, 118.911 ), Vector2( 153.658, 124.702 ), Vector2( -91.8856, 75.6705 ), Vector2( 186.474, -24.3227 ), Vector2( -91.8856, 75.6705 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Girl:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 3, 3.2, 4.6, 4.8, 6, 6.2, 6.3, 7.2, 7.3, 7.4, 9.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "idle", "skiing", "idle", "skiing", "idle", "skiing", "idle", "skiing", "stunt", "skiing", "idle", "skiing", "idle" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Girl:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3, 5.4, 7.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "smartphone",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=24]
+resource_name = "Ben Ice"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Sound")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 46 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Cinematograph")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "2_iceb" ],
+"method": "play_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Enter Scene"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("Sound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 0.9, 6.7 )
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Cinematograph")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 8.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "2_entrya" ],
+"method": "play_scene"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Ambience:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Fadein"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Cinematograph")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "2_entryb" ],
+"method": "play_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "Rescue"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Girl1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1041.45, 237.542 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Girl2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 633.757, 238.371 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Ben:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BenSitting:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Cinematograph")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "2_icec" ],
+"method": "play_scene"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Girl1/Girl:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Girl2/Girl:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "idle" ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Music:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( -0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Girl2/Girl:flip_h")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Girl1/Girl:flip_h")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Text from Phil"
+length = 3.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Sound")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 47 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 48 )
+} ],
+"times": PoolRealArray( 0, 2.4 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BenSitting:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "smartphone" ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Cinematograph")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "2_iced" ],
+"method": "play_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "blackout"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.9 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "change_to_pub"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Ambience:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "kids"
+length = 5.5
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Music")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Music:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -80.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IceSkatingAmbience:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -80.0, -22.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 960, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BenSitting:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Cinematograph")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 5.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "2_entryc" ],
+"method": "play_scene"
+} ]
+}
+
+[node name="Scene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Hotspots" type="Node" parent="."]
+
+[node name="PlantingBed" type="TextureButton" parent="Hotspots"]
+margin_left = 1216.0
+margin_top = 708.0
+margin_right = 2216.0
+margin_bottom = 984.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wall" type="TextureButton" parent="Hotspots"]
+margin_left = 1062.0
+margin_top = 266.0
+margin_right = 2261.0
+margin_bottom = 634.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="City" type="TextureButton" parent="Hotspots"]
+margin_top = 8.557
+margin_right = 690.0
+margin_bottom = 257.557
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tree" type="TextureButton" parent="Hotspots"]
+margin_left = 562.0
+margin_top = 266.0
+margin_right = 1032.0
+margin_bottom = 871.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stick" type="TextureButton" parent="Hotspots"]
+margin_left = 358.0
+margin_top = 915.0
+margin_right = 659.0
+margin_bottom = 1063.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkatingGirls" type="TextureButton" parent="Hotspots"]
+margin_left = 8.0
+margin_top = 503.0
+margin_right = 572.0
+margin_bottom = 951.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Leaf" type="Node2D" parent="."]
+position = Vector2( 960, 0 )
+
+[node name="Leaf" type="Sprite" parent="Leaf"]
+position = Vector2( 1114.07, 383.05 )
+rotation = 0.0872654
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -7, -3 )
+
+[node name="LeafFlipped" type="Sprite" parent="Leaf"]
+visible = false
+position = Vector2( 1114.07, 383.05 )
+rotation = -0.174533
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( -15, -3 )
+flip_h = true
+
+[node name="LeafAnimation" type="AnimationPlayer" parent="Leaf"]
+autoplay = "Leaf"
+anims/Leaf = SubResource( 1 )
+
+[node name="Girl1" type="Node2D" parent="."]
+position = Vector2( 1041.45, 237.542 )
+
+[node name="Girl" type="AnimatedSprite" parent="Girl1"]
+position = Vector2( 156.348, 672.592 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 6 )
+animation = "idle"
+
+[node name="Animation" type="AnimationPlayer" parent="Girl1"]
+autoplay = "Skiing"
+"anims/Getting in fear" = SubResource( 8 )
+anims/Skiing = SubResource( 7 )
+
+[node name="Girl2" type="Node2D" parent="."]
+position = Vector2( 633.757, 238.371 )
+
+[node name="Girl" type="AnimatedSprite" parent="Girl2"]
+position = Vector2( 145.538, 675.295 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 21 )
+animation = "idle"
+flip_h = true
+
+[node name="Animation" type="AnimationPlayer" parent="Girl2"]
+autoplay = "Skiing"
+"anims/Getting in fear" = SubResource( 9 )
+anims/Skiing = SubResource( 10 )
+
+[node name="Stick" type="Sprite" parent="."]
+position = Vector2( 504, 999.549 )
+texture = ExtResource( 5 )
+
+[node name="Ben" parent="." instance=ExtResource( 45 )]
+visible = false
+position = Vector2( 614.551, 907.07 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="BenSitting" type="AnimatedSprite" parent="."]
+position = Vector2( 983, 909.607 )
+frames = SubResource( 2 )
+
+[node name="Bench" type="Sprite" parent="."]
+position = Vector2( 980, 975.791 )
+texture = ExtResource( 8 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -80.0
+bus = "music"
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+bus = "sound"
+
+[node name="IceSkatingAmbience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -80.0
+bus = "sound"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+bus = "sound"
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+autoplay = "Enter Scene"
+"anims/Ben Ice" = SubResource( 24 )
+"anims/Enter Scene" = SubResource( 3 )
+anims/Fadein = SubResource( 4 )
+anims/Rescue = SubResource( 25 )
+"anims/Text from Phil" = SubResource( 26 )
+anims/blackout = SubResource( 27 )
+anims/kids = SubResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 960, 0 )
+anchor_mode = 0
+current = true
+
+[node name="Shader" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 960.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cinematograph" parent="." instance=ExtResource( 2 )]
+margin_top = -2.0
+[connection signal="pressed" from="Hotspots/PlantingBed" to="." method="_on_PlantingBed_pressed"]
+[connection signal="pressed" from="Hotspots/Wall" to="." method="_on_Wall_pressed"]
+[connection signal="pressed" from="Hotspots/City" to="." method="_on_City_pressed"]
+[connection signal="pressed" from="Hotspots/Tree" to="." method="_on_Tree_pressed"]
+[connection signal="pressed" from="Hotspots/Stick" to="." method="_on_Stick_pressed"]
+[connection signal="pressed" from="Hotspots/SkatingGirls" to="." method="_on_SkatingGirls_pressed"]
+[connection signal="animation_finished" from="Girl1/Animation" to="." method="_on_Girl1_animation_finished"]
+[connection signal="animation_finished" from="Girl2/Animation" to="." method="_on_Girl2_animation_finished"]
+[connection signal="target_reached" from="Ben" to="." method="_on_Ben_target_reached"]
+[connection signal="finished" from="Cinematograph" to="." method="_on_Cinematograph_finished"]

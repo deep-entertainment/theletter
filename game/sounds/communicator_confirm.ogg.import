@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/communicator_confirm.ogg-111e0dcc1dc959086c788c2ba19f2649.oggstr"
+
+[deps]
+
+source_file="res://sounds/communicator_confirm.ogg"
+dest_files=[ "res://.import/communicator_confirm.ogg-111e0dcc1dc959086c788c2ba19f2649.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

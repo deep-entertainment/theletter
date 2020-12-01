@@ -1,0 +1,420 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://images/Bens Home.png" type="Texture" id=2]
+[ext_resource path="res://images/ads/ad2.png" type="Texture" id=3]
+[ext_resource path="res://images/ads/ad1.png" type="Texture" id=4]
+[ext_resource path="res://images/ads/ad3.png" type="Texture" id=5]
+[ext_resource path="res://images/light/0009.png" type="Texture" id=6]
+[ext_resource path="res://images/light/0004.png" type="Texture" id=7]
+[ext_resource path="res://images/light/0008.png" type="Texture" id=8]
+[ext_resource path="res://images/light/0005.png" type="Texture" id=9]
+[ext_resource path="res://images/light/0002.png" type="Texture" id=10]
+[ext_resource path="res://images/light/0003.png" type="Texture" id=11]
+[ext_resource path="res://images/light/0006.png" type="Texture" id=12]
+[ext_resource path="res://images/light/0001.png" type="Texture" id=13]
+[ext_resource path="res://images/light/0010.png" type="Texture" id=14]
+[ext_resource path="res://images/light/0007.png" type="Texture" id=15]
+[ext_resource path="res://images/communicator/0002.png" type="Texture" id=16]
+[ext_resource path="res://images/communicator/0006.png" type="Texture" id=17]
+[ext_resource path="res://images/communicator/0001.png" type="Texture" id=18]
+[ext_resource path="res://images/communicator/0003.png" type="Texture" id=19]
+[ext_resource path="res://images/communicator/0005.png" type="Texture" id=20]
+[ext_resource path="res://images/communicator/0004.png" type="Texture" id=21]
+[ext_resource path="res://images/communicator/0008.png" type="Texture" id=22]
+[ext_resource path="res://images/communicator/0007.png" type="Texture" id=23]
+[ext_resource path="res://images/fire/0001.png" type="Texture" id=24]
+[ext_resource path="res://images/fire/0002.png" type="Texture" id=25]
+[ext_resource path="res://images/fire/0005.png" type="Texture" id=26]
+[ext_resource path="res://images/fire/0003.png" type="Texture" id=27]
+[ext_resource path="res://images/fire/0004.png" type="Texture" id=28]
+[ext_resource path="res://scripts/Intro.gd" type="Script" id=29]
+[ext_resource path="res://themes/DefaultText.tres" type="Theme" id=30]
+[ext_resource path="res://music/intro.ogg" type="AudioStream" id=31]
+[ext_resource path="res://images/logo.png" type="Texture" id=32]
+[ext_resource path="res://sounds/clock.ogg" type="AudioStream" id=33]
+[ext_resource path="res://images/ads/ad4.png" type="Texture" id=34]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.2
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "warning",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 16 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "poweron",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+resource_name = "Intro"
+length = 90.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 7, 29.2, 31.4, 53.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1510.04, 945.295 ), Vector2( 1510.04, 263.422 ), Vector2( 452.316, 269.692 ), Vector2( 1339.79, 158.758 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shader:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 7.2, 10, 28.2, 29.2, 31.4, 32.4, 54.6, 55.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CanvasLayer/Dennis Ploeger:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7.1, 10.1, 11.1, 13.1, 14.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CanvasLayer/Paul Thomas:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 7.1, 22.5, 23.4, 25.5, 26.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("CanvasLayer/Rose Newell:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 7.1, 37.4, 38.4, 40.4, 41.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CanvasLayer/Sally Beaumont:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 7.1, 16.1, 17.1, 19.1, 20.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CanvasLayer/Michael Forward:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 7.1, 29.5, 30.5, 32.5, 33.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("CanvasLayer/Laura Cress:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 7.1, 44.5, 45.6, 47.6, 48.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CanvasLayer/Logo:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 7.1, 55.6, 57.5, 60.6, 62.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 63.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "lets_begin"
+} ]
+}
+tracks/10/type = "audio"
+tracks/10/path = NodePath("Sound")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 33 )
+} ],
+"times": PoolRealArray( 7 )
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("CanvasLayer/deep entertainment:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 1, 2, 4, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "audio"
+tracks/12/path = NodePath("Music")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 31 )
+} ],
+"times": PoolRealArray( 5.4 )
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Sound:volume_db")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 41.6, 50.3, 60.6, 63.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -80.0, -80.0, 0.0, 0.0, -80.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Camera2D:current")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="Revelations" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 29 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ads" type="AnimatedSprite" parent="."]
+position = Vector2( 299.155, 277.917 )
+scale = Vector2( 0.658, 0.631 )
+frames = SubResource( 1 )
+playing = true
+
+[node name="lamp" type="AnimatedSprite" parent="."]
+position = Vector2( 697.89, 412.837 )
+frames = SubResource( 2 )
+frame = 6
+playing = true
+
+[node name="communicator" type="AnimatedSprite" parent="."]
+position = Vector2( 1016.93, 400.045 )
+frames = SubResource( 3 )
+animation = "poweron"
+
+[node name="fire" type="AnimatedSprite" parent="."]
+position = Vector2( 1581.62, 726.62 )
+frames = SubResource( 4 )
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1510.04, 939.152 )
+anchor_mode = 0
+current = true
+zoom = Vector2( 0.1, 0.1 )
+
+[node name="NormalCamera" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+autoplay = "Intro"
+anims/Intro = SubResource( 5 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+
+[node name="Shader" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="deep entertainment" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -246.5
+margin_top = -51.5
+margin_right = 246.5
+margin_bottom = 51.5
+theme = ExtResource( 30 )
+text = "deep entertainment presents"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dennis Ploeger" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 49.2315
+margin_top = 959.258
+margin_right = 305.232
+margin_bottom = 1062.26
+theme = ExtResource( 30 )
+text = "Dennis Ploeger
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Paul Thomas" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 49.2315
+margin_top = 959.258
+margin_right = 305.232
+margin_bottom = 1062.26
+theme = ExtResource( 30 )
+text = "Paul Thomas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rose Newell" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 49.2315
+margin_top = 959.258
+margin_right = 305.232
+margin_bottom = 1062.26
+theme = ExtResource( 30 )
+text = "Rose Newell"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sally Beaumont" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1620.79
+margin_top = 972.246
+margin_right = 1888.79
+margin_bottom = 1075.25
+theme = ExtResource( 30 )
+text = "Sally Beaumont"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Michael Forward" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1603.47
+margin_top = 972.246
+margin_right = 1898.47
+margin_bottom = 1075.25
+theme = ExtResource( 30 )
+text = "Michael Forward"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Laura Cress" type="Label" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 1620.79
+margin_top = 972.246
+margin_right = 1888.79
+margin_bottom = 1075.25
+theme = ExtResource( 30 )
+text = "Laura Cress"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="Sprite" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 924.072, 537.271 )
+texture = ExtResource( 32 )

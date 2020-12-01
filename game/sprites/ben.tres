@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=43 format=2]
+
+[ext_resource path="res://images/ben/left/0000.png" type="Texture" id=1]
+[ext_resource path="res://images/ben/left/0005.png" type="Texture" id=2]
+[ext_resource path="res://images/ben/left/0013.png" type="Texture" id=3]
+[ext_resource path="res://images/ben/left/0001.png" type="Texture" id=4]
+[ext_resource path="res://images/ben/left/0014.png" type="Texture" id=5]
+[ext_resource path="res://images/ben/left/0002.png" type="Texture" id=6]
+[ext_resource path="res://images/ben/left/0003.png" type="Texture" id=7]
+[ext_resource path="res://images/ben/left/0007.png" type="Texture" id=8]
+[ext_resource path="res://images/ben/left/0008.png" type="Texture" id=9]
+[ext_resource path="res://images/ben/left/0015.png" type="Texture" id=10]
+[ext_resource path="res://images/ben/left/0009.png" type="Texture" id=11]
+[ext_resource path="res://images/ben/left/0011.png" type="Texture" id=12]
+[ext_resource path="res://images/ben/left/0012.png" type="Texture" id=13]
+[ext_resource path="res://images/ben/left/0004.png" type="Texture" id=14]
+[ext_resource path="res://images/ben/left/0006.png" type="Texture" id=15]
+[ext_resource path="res://images/ben/left/0010.png" type="Texture" id=16]
+[ext_resource path="res://images/ben/idle/0000.png" type="Texture" id=17]
+[ext_resource path="res://images/ben/standup/0000.png" type="Texture" id=18]
+[ext_resource path="res://images/ben/standup/0012.png" type="Texture" id=19]
+[ext_resource path="res://images/ben/standup/0013.png" type="Texture" id=20]
+[ext_resource path="res://images/ben/standup/0015.png" type="Texture" id=21]
+[ext_resource path="res://images/ben/standup/0019.png" type="Texture" id=22]
+[ext_resource path="res://images/ben/standup/0021.png" type="Texture" id=23]
+[ext_resource path="res://images/ben/standup/0024.png" type="Texture" id=24]
+[ext_resource path="res://images/ben/standup/0016.png" type="Texture" id=25]
+[ext_resource path="res://images/ben/standup/0017.png" type="Texture" id=26]
+[ext_resource path="res://images/ben/standup/0006.png" type="Texture" id=27]
+[ext_resource path="res://images/ben/standup/0007.png" type="Texture" id=28]
+[ext_resource path="res://images/ben/standup/0018.png" type="Texture" id=29]
+[ext_resource path="res://images/ben/standup/0022.png" type="Texture" id=30]
+[ext_resource path="res://images/ben/standup/0023.png" type="Texture" id=31]
+[ext_resource path="res://images/ben/standup/0005.png" type="Texture" id=32]
+[ext_resource path="res://images/ben/standup/0010.png" type="Texture" id=33]
+[ext_resource path="res://images/ben/standup/0002.png" type="Texture" id=34]
+[ext_resource path="res://images/ben/standup/0003.png" type="Texture" id=35]
+[ext_resource path="res://images/ben/standup/0020.png" type="Texture" id=36]
+[ext_resource path="res://images/ben/standup/0001.png" type="Texture" id=37]
+[ext_resource path="res://images/ben/standup/0009.png" type="Texture" id=38]
+[ext_resource path="res://images/ben/standup/0014.png" type="Texture" id=39]
+[ext_resource path="res://images/ben/standup/0011.png" type="Texture" id=40]
+[ext_resource path="res://images/ben/standup/0008.png" type="Texture" id=41]
+[ext_resource path="res://images/ben/standup/0004.png" type="Texture" id=42]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 18 ) ],
+"loop": false,
+"name": "sit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 42 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 41 ), ExtResource( 38 ), ExtResource( 33 ), ExtResource( 40 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 39 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 22 ), ExtResource( 36 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "standup",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "left",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]

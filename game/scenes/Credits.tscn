@@ -1,0 +1,358 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://music/credits.ogg" type="AudioStream" id=1]
+[ext_resource path="res://themes/DefaultText.tres" type="Theme" id=2]
+[ext_resource path="res://scripts/Credits.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Credit roll"
+length = 217.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Credits:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 180 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 1080 ), Vector2( 0, -7340.31 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Credits:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 206.9, 216 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 216.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "exitGame"
+} ]
+}
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="RichTextLabel" parent="."]
+light_mask = -2147483647
+anchor_right = 1.0
+margin_top = 1080.0
+margin_bottom = 9368.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]
+written by
+DENNIS PLOEGER
+
+
+
+narrative design
+SALLY BEAUMONT
+
+
+
+based on
+\"THE LETTER\"
+by Dennis Ploeger
+
+
+
+dialogues
+SALLY BEAUMONT
+
+
+
+music
+RIKARD PETERSON
+
+
+
+sound design
+CADE CONKLE
+
+
+
+characters
+ERIK PLOEGER
+DENNIS PLOEGER
+
+
+
+programming
+DENNIS PLOEGER
+
+
+
+voice casting
+SALLY BEAUMONT
+
+
+
+starring the voices of
+
+
+
+DENNIS PLOEGER
+Ben
+
+
+
+SALLY BEAUMONT
+Judith
+
+
+
+PAUL THOMAS
+Phil 
+
+
+
+MICHAEL FORWARD
+Communicator
+
+
+
+ROSE NEWELL
+Andy
+
+
+
+SALLY BEAUMONT
+Receptionist
+
+
+
+LAURA CRESS
+Girl 1
+
+
+
+SALLY BEAUMONT
+Girl 2
+
+
+
+testers
+MIKAEL NYQVIST
+AMY TANT
+GILLHESPY
+
+
+
+tools
+
+
+
+[img]res://images/godot-logo.png[/img]
+GODOT
+
+[img]res://images/blender-logo.png[/img]
+BLENDER
+
+[img]res://images/concepts-logo.png[/img]
+CONCEPTS
+
+[img]res://images/reaper-logo.png[/img]
+REAPER
+
+
+
+Dennis Ploeger wishes to thank
+
+
+The whole team for being so creative, helpful and awesome and pushing me to make my dream come true of actually release my first real game.
+My wife Eva and son Erik for her continued support and love. And for letting me vanish during this jam.
+And you for playing!
+
+
+
+
+
+[img]res://images/logo.png[/img]
+
+https://deepgames.itch.io/the-letter
+
+
+
+made for
+ADVENTUREX JAM 2020
+[/center]"
+text = "
+written by
+DENNIS PLOEGER
+
+
+
+narrative design
+SALLY BEAUMONT
+
+
+
+based on
+\"THE LETTER\"
+by Dennis Ploeger
+
+
+
+dialogues
+SALLY BEAUMONT
+
+
+
+music
+RIKARD PETERSON
+
+
+
+sound design
+CADE CONKLE
+
+
+
+characters
+ERIK PLOEGER
+DENNIS PLOEGER
+
+
+
+programming
+DENNIS PLOEGER
+
+
+
+voice casting
+SALLY BEAUMONT
+
+
+
+starring the voices of
+
+
+
+DENNIS PLOEGER
+Ben
+
+
+
+SALLY BEAUMONT
+Judith
+
+
+
+PAUL THOMAS
+Phil 
+
+
+
+MICHAEL FORWARD
+Communicator
+
+
+
+ROSE NEWELL
+Andy
+
+
+
+SALLY BEAUMONT
+Receptionist
+
+
+
+LAURA CRESS
+Girl 1
+
+
+
+SALLY BEAUMONT
+Girl 2
+
+
+
+testers
+MIKAEL NYQVIST
+AMY TANT
+GILLHESPY
+
+
+
+tools
+
+
+
+
+GODOT
+
+
+BLENDER
+
+
+CONCEPTS
+
+
+REAPER
+
+
+
+Dennis Ploeger wishes to thank
+
+
+The whole team for being so creative, helpful and awesome and pushing me to make my dream come true of actually release my first real game.
+My wife Eva and son Erik for her continued support and love. And for letting me vanish during this jam.
+And you for playing!
+
+
+
+
+
+
+
+https://deepgames.itch.io/the-letter
+
+
+
+made for
+ADVENTUREX JAM 2020
+"
+fit_content_height = true
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Credit roll"
+"anims/Credit roll" = SubResource( 1 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true

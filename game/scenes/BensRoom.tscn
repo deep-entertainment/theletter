@@ -1,0 +1,542 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://animations/LampGlow.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://animations/Fire.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://images/Bens Home.png" type="Texture" id=3]
+[ext_resource path="res://animations/Light.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://scripts/BensRoom.gd" type="Script" id=5]
+[ext_resource path="res://animations/Communicator.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://images/armchairmask.png" type="Texture" id=7]
+[ext_resource path="res://scenes/Cinematograph.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Ben.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sounds/communicator_hum.ogg" type="AudioStream" id=10]
+[ext_resource path="res://sounds/communicator_confirm.ogg" type="AudioStream" id=11]
+[ext_resource path="res://sounds/room_ambience.ogg" type="AudioStream" id=12]
+[ext_resource path="res://music/benshome.ogg" type="AudioStream" id=13]
+[ext_resource path="res://images/ads/ad4.png" type="Texture" id=14]
+[ext_resource path="res://images/ads/ad2.png" type="Texture" id=15]
+[ext_resource path="res://images/ads/ad3.png" type="Texture" id=16]
+[ext_resource path="res://images/ads/ad1.png" type="Texture" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 0.2
+} ]
+
+[sub_resource type="Animation" id=2]
+length = 14.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Sounds")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shader:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 5.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Ben")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 6.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "set_fliph"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Ben")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 6.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "standup" ],
+"method": "run_animation"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 10.6, 12, 13.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ true ],
+"method": "disableHotspots"
+}, {
+"args": [  ],
+"method": "exit_fireplace"
+}, {
+"args": [  ],
+"method": "to_start"
+}, {
+"args": [ false ],
+"method": "disableHotspots"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ChairMask:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 11.6, 11.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.788235, 0.788235, 0.788235, 1 ), Color( 0.788235, 0.788235, 0.788235, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Communicator:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "warning" ]
+}
+
+[sub_resource type="Animation" id=3]
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Sounds")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 1.00412,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sounds:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Cinematograph")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "1_communicator_notification" ],
+"method": "play_scene"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "to_start"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("Communicator")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "speak", false ],
+"method": "play"
+} ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Ending the monologue"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:reverb_intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.5, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shader:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.631373 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sounds:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.0812208 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:reverb_intensity")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( -0.0270736, 2.80888 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.5 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Cinematograph")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.82242 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "1_theletterb" ],
+"method": "play_scene"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shader:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.631373 ) ]
+}
+
+[node name="Scene" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+offset = Vector2( 1920.15, 1080.25 )
+
+[node name="Fire" type="AnimatedSprite" parent="."]
+position = Vector2( 1581.62, 726.62 )
+frames = ExtResource( 2 )
+frame = 3
+playing = true
+
+[node name="Ads" type="AnimatedSprite" parent="."]
+modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 299.155, 277.917 )
+scale = Vector2( 0.657779, 0.631353 )
+frames = SubResource( 1 )
+frame = 3
+playing = true
+
+[node name="LampBackDoorLeft" type="AnimatedSprite" parent="."]
+position = Vector2( 1244.57, 345.881 )
+frames = ExtResource( 1 )
+frame = 1
+playing = true
+
+[node name="LampBackDoorRight" type="AnimatedSprite" parent="."]
+position = Vector2( 1464.38, 360.754 )
+rotation = 0.0123024
+scale = Vector2( 0.903964, 0.89817 )
+frames = ExtResource( 1 )
+frame = 1
+playing = true
+
+[node name="LampFrontDoor" type="AnimatedSprite" parent="."]
+position = Vector2( 36.5131, 353.199 )
+rotation = -0.072737
+scale = Vector2( 1.52533, 1.31069 )
+frames = ExtResource( 1 )
+playing = true
+
+[node name="Light" type="AnimatedSprite" parent="."]
+position = Vector2( 697.89, 412.837 )
+frames = ExtResource( 4 )
+frame = 5
+playing = true
+
+[node name="Communicator" type="AnimatedSprite" parent="."]
+position = Vector2( 1016.93, 400.045 )
+frames = ExtResource( 6 )
+animation = "warning"
+playing = true
+
+[node name="Hotspots" type="Node" parent="."]
+
+[node name="Communicator" type="TextureButton" parent="Hotspots"]
+margin_left = 964.93
+margin_top = 358.045
+margin_right = 1070.93
+margin_bottom = 433.045
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cupboard" type="TextureButton" parent="Hotspots"]
+margin_left = 634.0
+margin_top = 348.0
+margin_right = 899.0
+margin_bottom = 562.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhotoFamily" type="TextureButton" parent="Hotspots"]
+margin_left = 472.0
+margin_top = 237.0
+margin_right = 530.0
+margin_bottom = 282.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhotoGang" type="TextureButton" parent="Hotspots"]
+margin_left = 566.221
+margin_top = 274.044
+margin_right = 624.221
+margin_bottom = 319.044
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhotoVacation" type="TextureButton" parent="Hotspots"]
+margin_left = 496.965
+margin_top = 329.611
+margin_right = 554.965
+margin_bottom = 374.611
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clock" type="TextureButton" parent="Hotspots"]
+margin_left = 1411.0
+margin_top = 168.0
+margin_right = 1471.0
+margin_bottom = 238.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhotoJudith" type="TextureButton" parent="Hotspots"]
+margin_left = 1562.0
+margin_top = 380.0
+margin_right = 1612.0
+margin_bottom = 450.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoorFront" type="TextureButton" parent="Hotspots"]
+margin_left = 2.0
+margin_top = 210.0
+margin_right = 87.0
+margin_bottom = 920.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoorBack" type="TextureButton" parent="Hotspots"]
+margin_left = 1114.0
+margin_top = 269.0
+margin_right = 1283.0
+margin_bottom = 597.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoorRight" type="TextureButton" parent="Hotspots"]
+margin_left = 1392.0
+margin_top = 288.0
+margin_right = 1482.0
+margin_bottom = 666.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plants" type="TextureButton" parent="Hotspots"]
+margin_left = 173.0
+margin_top = 496.0
+margin_right = 409.0
+margin_bottom = 706.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PhotoPhil" type="TextureButton" parent="Hotspots"]
+margin_left = 541.0
+margin_top = 649.0
+margin_right = 614.0
+margin_bottom = 717.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cushion" type="TextureButton" parent="Hotspots"]
+margin_left = 787.823
+margin_top = 580.144
+margin_right = 860.823
+margin_bottom = 648.144
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carpet" type="TextureButton" parent="Hotspots"]
+margin_left = 357.0
+margin_top = 834.0
+margin_right = 970.0
+margin_bottom = 983.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ben" parent="." instance=ExtResource( 9 )]
+position = Vector2( 983.53, 729.577 )
+
+[node name="ChairMask" type="Sprite" parent="."]
+modulate = Color( 0.745098, 0.745098, 0.745098, 1 )
+position = Vector2( 1385.02, 741.413 )
+scale = Vector2( 0.885032, 0.885033 )
+texture = ExtResource( 7 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+bus = "music"
+
+[node name="Sounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+bus = "sound"
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
+bus = "sound"
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+autoplay = "Begin of Scene"
+"anims/Begin of Scene" = SubResource( 2 )
+"anims/Confirming Warning" = SubResource( 3 )
+"anims/Ending the monologue" = SubResource( 4 )
+"anims/Starting the monologue" = SubResource( 5 )
+
+[node name="Shader" type="ColorRect" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+light_mask = -2147483647
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cinematograph" parent="." instance=ExtResource( 8 )]
+[connection signal="pressed" from="Hotspots/Communicator" to="." method="_on_Communicator_pressed"]
+[connection signal="pressed" from="Hotspots/Cupboard" to="." method="_on_Cupboard_pressed"]
+[connection signal="pressed" from="Hotspots/PhotoFamily" to="." method="_on_PhotoFamily_pressed"]
+[connection signal="pressed" from="Hotspots/PhotoGang" to="." method="_on_PhotoGang_pressed"]
+[connection signal="pressed" from="Hotspots/PhotoVacation" to="." method="_on_PhotoVacation_pressed"]
+[connection signal="pressed" from="Hotspots/Clock" to="." method="_on_Clock_pressed"]
+[connection signal="pressed" from="Hotspots/PhotoJudith" to="." method="_on_PhotoJudith_pressed"]
+[connection signal="pressed" from="Hotspots/DoorFront" to="." method="_on_DoorFront_pressed"]
+[connection signal="pressed" from="Hotspots/DoorBack" to="." method="_on_DoorBack_pressed"]
+[connection signal="pressed" from="Hotspots/DoorRight" to="." method="_on_DoorRight_pressed"]
+[connection signal="pressed" from="Hotspots/Plants" to="." method="_on_Plants_pressed"]
+[connection signal="pressed" from="Hotspots/PhotoPhil" to="." method="_on_PhotoPhil_pressed"]
+[connection signal="pressed" from="Hotspots/Cushion" to="." method="_on_Cushion_pressed"]
+[connection signal="pressed" from="Hotspots/Carpet" to="." method="_on_Carpet_pressed"]
+[connection signal="target_reached" from="Ben" to="." method="_on_Ben_target_reached"]
+[connection signal="finished" from="Cinematograph" to="." method="_on_Cinematograph_finished"]

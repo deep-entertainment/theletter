@@ -1,38 +1,85 @@
 # The letter
 
-An [Adventure X Jam](https://itch.io/jam/advxjam) game
+An atmospheric narrative game about a pensioner's existential crisis in a dystopian future.
 
-based on "[The letter](./The%20Letter.pdf)" by Dennis Plöger 
+Made for [Adventure X Jam 2020](https://itch.io/jam/advxjam) game \
+based on "[The letter](./design/shortstory/The%20Letter.pdf)" by Dennis Plöger 
+
+## Credits
+
+written by\
+[DENNIS PLOEGER](https://dennis.dieploegers.de/artist)
+
+narrative design\
+[SALLY BEAUMONT](http://www.sallybeaumont.com)
+
+based on\
+\"THE LETTER\"\
+by [DENNIS PLOEGER](https://dennis.dieploegers.de/artist)
+
+dialogues\
+[SALLY BEAUMONT](http://www.sallybeaumont.com/)
+
+music\
+[RIKARD
+PETERSON](https://www.youtube.com/channel/UC5TfSQAcC5UEOf7s5lqX2eA)
+
+sound design\
+[CADE CONKLE](http://www.cade-conkle.com/)
+
+characters\
+ERIK PLOEGER\
+[DENNIS PLOEGER](https://dennis.dieploegers.de/artist)
+
+programming\
+[DENNIS PLOEGER](https://dennis.dieploegers.de/artist)
+
+voice casting\
+[SALLY BEAUMONT](http://www.sallybeaumont.com/)
+
+starring the voices of
+
+[DENNIS PLOEGER](https://dennis.dieploegers.de/artist) \
+[SALLY BEAUMONT](http://www.sallybeaumont.com/) \
+[PAUL THOMAS](http://www.paul-thomas.net) \
+[MICHAEL FORWARD](https://www.youtube.com/channel/UC9mCaGd69Q8dU0o01mzuQ4g) \
+[ROSE NEWELL](http://www.englishroseberlin.com) \
+[LAURA CRESS](https://www.twitch.tv/cressup)
+
+testers\
+[MIKAEL NYQVIST](http://mdna-games.com/) \
+AMY TANT \
+GILLHESPY
 
 ## Current status
 
-* [Sally Beaumont](https://sallybeaumont.com/) and [Dennis Plöger](https://dennis.dieploegers.de) are currently etching
-  out a structure for the game, based on the short story
-* [Rikard Peterson](https://www.youtube.com/c/RikardPeterson) is on board for the in game music
-* We're in need of a graphic artist and animator
+* The game is published on its [itch.io](https://deepgames.itch.io/the-letter) page
+* The current status of the game is "beta"
 
-## Premise
+## What's in this repository?
 
-In the far future, the earth's population has grown so much, that earth can only hardly supply each and every
-person. As a drastic countermeasure, the world government (called the "Council") ordered, that all old people
-from a certain age on are randomly chosen and... killed. This event, dubbed "The Demise", is the most
-fearful thing for the people, which usually see a world of peace and well-being.
+This repository holds all ressources that the team agreed to make freely available
+under an open license.
 
-The game follows Ben, who just received a official letter from the Council. Could it be, that he is ordered
-for "The Demise"? Or is it just something harmless? He's only sixty-eight and "The Demise" usually starts
-at seventy. So it can't be!
+The following components are missing:
 
-Or can it?
+* The music itself (The soundtrack is available on our [itch.io](https://deepgames.itch.io/the-letter) page)
+* The voice recordings
+* The game design document
 
-## Setting
+These resources are available:
 
-While we're in the future (The year's 2913), the game's setting and proposed visual style is mainly something
-like the 1990s with some small, fancy additions.
+* The game source code (without the required components)
+* The graphics
+* The sound effects
+* The original short story
 
-So far (work in progress) Sally and Dennis are thinking about some kind of [Diorama](https://en.wikipedia.org/wiki/Diorama)
-kind of game (think [Samorost games](https://amanita-design.net/games/samorost-2.html)). So a static,
-atmospheric background with clickable hotspots that trigger animations and drive the story forward.
+## Tools
 
-Additionally, we aim for voice support and background music.
+The following tools were used to make this game:
 
-The game will most probably be done in [Godot](https://godotengine.org/). 
+* [Godot](https://godotengine.org)
+* [Concepts](https://concepts.app)
+* [Blender](https://blender.org)
+* [Sketch](https://www.sketch.com/)
+* [Reaper](https://reaper.fm)

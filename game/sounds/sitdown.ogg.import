@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sitdown.ogg-8c69e9492718b92a62c1aca930108c79.oggstr"
+
+[deps]
+
+source_file="res://sounds/sitdown.ogg"
+dest_files=[ "res://.import/sitdown.ogg-8c69e9492718b92a62c1aca930108c79.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

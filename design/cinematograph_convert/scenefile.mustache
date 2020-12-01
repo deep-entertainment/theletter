@@ -1,0 +1,41 @@
+[gd_resource type="Animation" format=2]
+
+{{#has_voice}}
+[ext_resource path="res://voices/{{ voice_file }}" type="AudioStream" id=1]
+{{/has_voice}}
+
+[resource]
+resource_name = "{{ scene_name }}"
+length = {{ scene_length }}
+tracks/0/type = "value"
+tracks/0/path = NodePath("Subtitle:bbcode_text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "[color={{ character_color }}]
+[center]
+{{ text }}
+[/center]
+[/color]" ]
+}
+{{#has_voice}}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("Voice")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 1 )
+} ],
+"times": PoolRealArray( 0 )
+}
+{{/has_voice}}

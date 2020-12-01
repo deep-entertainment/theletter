@@ -1,0 +1,350 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://images/bar.png" type="Texture" id=1]
+[ext_resource path="res://images/Pub.png" type="Texture" id=2]
+[ext_resource path="res://images/table.png" type="Texture" id=3]
+[ext_resource path="res://images/Judith.png" type="Texture" id=4]
+[ext_resource path="res://scenes/BenCoat.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Phil.tscn" type="PackedScene" id=6]
+[ext_resource path="res://images/trisha/clean/0007.png" type="Texture" id=7]
+[ext_resource path="res://images/trisha/clean/0001.png" type="Texture" id=8]
+[ext_resource path="res://images/trisha/clean/0002.png" type="Texture" id=9]
+[ext_resource path="res://images/trisha/clean/0008.png" type="Texture" id=10]
+[ext_resource path="res://images/trisha/clean/0010.png" type="Texture" id=11]
+[ext_resource path="res://images/trisha/clean/0006.png" type="Texture" id=12]
+[ext_resource path="res://scenes/Andy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://images/trisha/clean/0004.png" type="Texture" id=14]
+[ext_resource path="res://images/trisha/clean/0005.png" type="Texture" id=15]
+[ext_resource path="res://images/trisha/clean/0003.png" type="Texture" id=16]
+[ext_resource path="res://images/trisha/clean/0000.png" type="Texture" id=17]
+[ext_resource path="res://images/trisha/clean/0009.png" type="Texture" id=18]
+[ext_resource path="res://images/trisha/side.png" type="Texture" id=19]
+[ext_resource path="res://scenes/Cinematograph.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scripts/Pub.gd" type="Script" id=21]
+[ext_resource path="res://music/pub.ogg" type="AudioStream" id=22]
+[ext_resource path="res://sounds/pub_ambience.ogg" type="AudioStream" id=23]
+[ext_resource path="res://sounds/door_close.ogg" type="AudioStream" id=24]
+[ext_resource path="res://sounds/cheers.ogg" type="AudioStream" id=25]
+[ext_resource path="res://sounds/wood_footsteps.ogg" type="AudioStream" id=26]
+[ext_resource path="res://images/pint.png" type="Texture" id=27]
+[ext_resource path="res://sounds/glassesring.ogg" type="AudioStream" id=28]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 18 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Entry"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shader:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.9, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("Sounds")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 24 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 25 )
+} ],
+"times": PoolRealArray( 0.3, 1.5 )
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("Sounds2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 1.22161,
+"start_offset": 0.0,
+"stream": ExtResource( 26 )
+} ],
+"times": PoolRealArray( 0.5 )
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Cinematograph")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "3_entrya" ],
+"method": "play_scene"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "blackout"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Sounds")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 28 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "audio"
+tracks/1/path = NodePath("Sounds2")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 28 )
+} ],
+"times": PoolRealArray( 0.1 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Shader:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Ambience:stream_paused")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Music:stream_paused")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "to_council"
+} ]
+}
+
+[node name="Pub" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Hotspots" type="Node" parent="."]
+
+[node name="Trisha" type="TextureButton" parent="Hotspots"]
+margin_left = 182.0
+margin_top = 325.0
+margin_right = 361.0
+margin_bottom = 674.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sign" type="TextureButton" parent="Hotspots"]
+margin_left = 19.0
+margin_top = 471.0
+margin_right = 175.0
+margin_bottom = 677.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bar" type="TextureButton" parent="Hotspots"]
+margin_left = 426.0
+margin_top = 168.0
+margin_right = 682.0
+margin_bottom = 940.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Crowd" type="TextureButton" parent="Hotspots"]
+margin_left = 690.0
+margin_top = 484.0
+margin_right = 1040.0
+margin_bottom = 826.0
+mouse_default_cursor_shape = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BensPint" type="TextureButton" parent="Hotspots"]
+margin_left = 1399.0
+margin_top = 608.0
+margin_right = 1465.0
+margin_bottom = 694.0
+mouse_default_cursor_shape = 2
+disabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Judith" type="Sprite" parent="."]
+position = Vector2( 1622.12, 729.64 )
+scale = Vector2( 0.431881, 0.431881 )
+texture = ExtResource( 4 )
+
+[node name="Ben" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1226.76, 1041.28 )
+scale = Vector2( 1.4, 1.4 )
+
+[node name="Table" type="Sprite" parent="."]
+position = Vector2( 1522.87, 885.088 )
+texture = ExtResource( 3 )
+
+[node name="Trisha" type="AnimatedSprite" parent="."]
+position = Vector2( 265.201, 505.997 )
+scale = Vector2( 1.27117, 1.27117 )
+frames = SubResource( 1 )
+frame = 9
+playing = true
+
+[node name="Bar" type="Sprite" parent="."]
+position = Vector2( 299.368, 585.134 )
+scale = Vector2( 0.942787, 0.942787 )
+texture = ExtResource( 1 )
+
+[node name="Phil" parent="." instance=ExtResource( 6 )]
+position = Vector2( 322.146, 1060.8 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="Andy" parent="." instance=ExtResource( 13 )]
+position = Vector2( 211.51, 1064.06 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="PintPhil" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1591.21, 663.816 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 27 )
+
+[node name="PintJudith" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1513.11, 631.276 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 27 )
+
+[node name="PintBen" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1431.76, 647.546 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 27 )
+
+[node name="PintAndy" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1340.65, 654.054 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 27 )
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+autoplay = true
+bus = "sound"
+
+[node name="Sounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+bus = "sound"
+
+[node name="Sounds2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+bus = "sound"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+autoplay = true
+bus = "music"
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+autoplay = "Entry"
+anims/Entry = SubResource( 2 )
+anims/blackout = SubResource( 3 )
+
+[node name="Shader" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cinematograph" parent="." instance=ExtResource( 20 )]
+[connection signal="pressed" from="Hotspots/Trisha" to="." method="_on_Trisha_pressed"]
+[connection signal="pressed" from="Hotspots/Sign" to="." method="_on_Sign_pressed"]
+[connection signal="pressed" from="Hotspots/Bar" to="." method="_on_Bar_pressed"]
+[connection signal="pressed" from="Hotspots/Crowd" to="." method="_on_Crowd_pressed"]
+[connection signal="pressed" from="Hotspots/BensPint" to="." method="_on_BensPint_pressed"]
+[connection signal="target_reached" from="Phil" to="." method="_on_Phil_target_reached"]
+[connection signal="target_reached" from="Andy" to="." method="_on_Andy_target_reached"]
+[connection signal="finished" from="Cinematograph" to="." method="_on_Cinematograph_finished"]

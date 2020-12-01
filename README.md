@@ -70,9 +70,9 @@ The following components are *missing*:
 
 These resources are available:
 
-* The game source code (without the required components)
-* The graphics
-* The original short story
+* The game source code (without the required components) [MIT](./MIT-LICENSE)
+* The graphics [CC-BY-SA](./CC-LICENSE)
+* The original short story [CC-BY-SA](./CC-LICENSE)
 
 ## Why release those files?
 

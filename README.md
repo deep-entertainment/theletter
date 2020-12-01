@@ -61,18 +61,35 @@ GILLHESPY
 This repository holds all ressources that the team agreed to make freely available
 under an open license.
 
-The following components are missing:
+The following components are *missing*:
 
 * The music itself (The soundtrack is available on our [itch.io](https://deepgames.itch.io/the-letter) page)
 * The voice recordings
 * The game design document
+* The sound effects
 
 These resources are available:
 
 * The game source code (without the required components)
 * The graphics
-* The sound effects
 * The original short story
+
+## Why release those files?
+
+> I'm a fanboy of open licenses and constantly use software and art 
+> under an open license, be it as a developer or an artist.
+>
+> I use open resources as a basis for my own resources or learn from them.
+>
+> Because of that I see it as an obligation to open stuff I've made myself.
+>
+> In the team, we couldn't agree to fully release all game assets under
+> an open license, which I absolutely respect.
+>
+> So this repository only contains resources I made and for which I hold
+> the sole copyright.
+>
+>-- Dennis Ploeger
 
 ## Tools
 
